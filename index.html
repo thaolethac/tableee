@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sach sinh vien</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input
+          type="text"
+          placeholder="Từ khóa cần tìm..."
+          style="border: 3px solid red; height: 35px"
+          onkeyup="myFunctionSearch()"
+          id="myInput"
+        />
+        <button
+          style="
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            padding: 3px;
+          "
+          id="button"
+        >
+          Tìm kiếm
+        </button>
+      </form>
+      <div class="update-form">
+        <table style="width: auto; height: 50px">
+          <tr>
+            <th>Mã SV<span class="span-requried">(*)</span></th>
+            <th>Tên Sinh Viên<span class="span-requried">(*)</span></th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Khoa<span class="span-requried">(*)</span></th>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" class="update" required value=" " id="add1" />
+            </td>
+            <td>
+              <input type="text" class="update" required value=" " id="add2" />
+            </td>
+            <td>
+              <input type="text" class="update" value=" " id="add3" />
+            </td>
+            <td>
+              <form style="width: auto; height: 5px">
+                <input
+                  type="radio"
+                  value="Nam"
+                  name="gioitinh"
+                  id="add4"
+                  onclick="myFunction(this.value)"
+                />
+                <label for="nam">Nam</label><br />
+                <input
+                  type="radio"
+                  value="Nữ"
+                  name="gioitinh"
+                  id="add5"
+                  onclick="myFunction(this.value)"
+                />
+                <label for="nu">Nữ</label>
+              </form>
+            </td>
+            <td>
+              <input type="text" class="update" value=" " required id="add6" />
+            </td>
+            <td class="button">
+              <button id="addsv" onclick="addsvv()">Thêm mới</button>
+            </td>
+            <td>
+              <button onclick="doxet()">Cập nhật</button>
+            </td>
+            <td>
+              <button id="add" onclick="delinput()">Xóa</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container-table">
+        <table id="addtable" class="list-tr" style="width: 800px">
+          <tr>
+            <th>&emsp;&emsp;&emsp;</th>
+            <th>Mã SV</th>
+            <th>Tên Sinh Viên</th>
+            <th>Ngày sinh <span class="span-requried">(*)</span></th>
+            <th>Giới tính</th>
+            <th>Khoa <span class="span-requried">(*)</span></th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+          </tr>
+        </table>
+        <button onclick="del()" id="del">Xóa</button>
+      </div>
+    </div>
+    <h1 id="count"></h1>
+    <script src="./search.js"></script>
+    <script src="./intern.js"></script>
+  </body>
+</html>

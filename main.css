@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+    padding: 20px;
+}
+.container-table {
+    font-size: 20px;
+}
+form {
+    margin-bottom: 50px;
+}
+input, button {
+    border-radius: 5px;
+}
+button {
+    padding: 5px;
+    cursor: pointer;
+}
+input:hover {
+    box-shadow: aqua;
+}
+form input {
+    font-size: 20px;
+}
+button {
+    font-size: 20px;
+}
+.container table,
+.container th,
+.container td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.update {
+    margin-bottom: 50px;
+}
+.update {
+    /* border: none; */
+    width: 100%;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.update-form {
+    margin-bottom: 100px;
+    
+}
+.update-form td{
+    text-align: start;
+    height: 20px;
+}
+/* .update input:active {
+    border: none;
+
+} */
+.span-requried {
+    color: red;
+}
